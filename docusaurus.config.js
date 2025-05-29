@@ -182,3 +182,13 @@ const config = {
 };
 
 export default config;
+
+module.exports = {
+  // ...
+  url: 'https://acsongor.github.io', // Cseréld le a saját GitHub felhasználónevedre!
+  baseUrl: '/Docu/', // Cseréld le a repository nevére!
+                                     // Ha a repository-hoz tartozó GitHub Pages neve acsongor.github.io, akkor a baseUrl '/' legyen.
+  organizationName: 'acsongor', // A GitHub felhasználóneved
+  projectName: 'Docu', // A GitHub repository-d neve
+  // ...
+};
