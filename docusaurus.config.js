@@ -97,7 +97,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Csongor Attila Docusaurus',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -181,14 +181,17 @@ const config = {
     }),
 };
 
-export default config;
-
-module.exports = {
+ module.exports = {
   // ...
+  title: 'Csongor Attila Docusaurus',
   url: 'https://acsongor.github.io', // Cseréld le a saját GitHub felhasználónevedre!
-  baseUrl: '/', // Cseréld le a repository nevére!
+  baseUrl: '/Docu/', // Cseréld le a repository nevére!
                                      // Ha a repository-hoz tartozó GitHub Pages neve acsongor.github.io, akkor a baseUrl '/' legyen.
   organizationName: 'acsongor', // A GitHub felhasználóneved
   projectName: 'Docu', // A GitHub repository-d neve
   // ...
-};
+}; 
+
+export default config;
+
+
