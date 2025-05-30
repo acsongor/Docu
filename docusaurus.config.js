@@ -71,6 +71,7 @@ const config = {
       }),
     ],
   ],
+
   plugins: [
     [
       'docusaurus-plugin-openapi-docs',
@@ -91,6 +92,7 @@ const config = {
     ]
   ],
   themes: ['docusaurus-theme-openapi-docs'],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -181,8 +183,30 @@ const config = {
     }),
 };
 
+export default config;
+
  module.exports = {
   // ...
+  plugins: [
+    [
+      'docusaurus-plugin-openapi-docs',
+      {
+        id: 'openapi', // A plugin egyedi azonosítója
+        docsPluginId: 'classic',
+        config: {
+          petstore: {  // Egyedi azonosító az API doksinak
+            specPath: 'openapi/petstore-api.yaml', // Az OpenAPI fájl elérési útja
+            outputDir: 'docs/petstore', // A generált Markdown fájlok helye
+            sidebarOptions: {
+              groupPathsBy: 'tag',  // Csoportosítás tagek alapján az oldalsávban
+            },
+            // További opciók a plugin dokumentációja szerint
+          },
+        }
+      }
+    ]
+  ],
+  themes: ['docusaurus-theme-openapi-docs'],
   title: 'Csongor Attila Docusaurus',
   url: 'https://acsongor.github.io', // Cseréld le a saját GitHub felhasználónevedre!
   baseUrl: '/Docu/', // Cseréld le a repository nevére!
@@ -192,6 +216,5 @@ const config = {
   // ...
 }; 
 
-export default config;
 
 
